@@ -2,13 +2,14 @@
 
 https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-v-user-logins
 
+------
 
 Para rodar a aplicação é só chegar no dir e:
-->flask run
+-flask run
 
 
 
 ------
 comando para ativar o venv
 
-->source meuenv/bin/activate
+>source meuenv/bin/activate
