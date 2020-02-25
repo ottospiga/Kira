@@ -13,4 +13,4 @@ Para rodar a aplicação é só chegar no dir e
 ------
 comando para ativar o venv
 
->source meuenv/bin/activate
+>source venv/bin/activate
