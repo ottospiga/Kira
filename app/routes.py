@@ -20,7 +20,7 @@ def index():
             'body': 'Beautiful day in Portland!'
         },
         {
-            'author': {'username': 'Susan'},
+            'author': {'username': 'Susam'},
             'body': 'The Avengers movie was so cool!'
         }
     ]
