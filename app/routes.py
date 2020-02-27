@@ -1,19 +1,15 @@
-from flask import render_template, flash, redirect, url_for#, request
-from app import app#, db
-from app.forms import LoginForm#, RegistrationForm
-from flask_login import current_user, login_user#, logout_user, login_required
-from app.models import User
-from flask_login import logout_user, login_required 
-from flask import request
+from flask import render_template, flash, redirect, url_for, request
+from flask_login import current_user, login_user, logout_user, login_required
 from werkzeug.urls import url_parse
-from app import db
-from app.forms import RegistrationForm
+from app import app, db
+from app.forms import LoginForm, RegistrationForm
+from app.models import User
+
 
 @app.route('/')
 @app.route('/index')
 @login_required
 def index():
-    #user = {'username': 'Otto'}
     posts = [
         {
             'author': {'username': 'John'},
@@ -42,14 +38,13 @@ def login():
         if not next_page or url_parse(next_page).netloc != '':
             next_page = url_for('index')
         return redirect(next_page)
-
-#        return redirect(url_for('index'))
- #   return render_template('login.html', title='Sign In', form=form)
+    return render_template('login.html', title='Sign In', form=form)
     
 @app.route('/logout')
 def logout():
     logout_user()
     return redirect(url_for('index'))
+    
 
 @app.route('/register', methods=['GET', 'POST'])
 def register():
