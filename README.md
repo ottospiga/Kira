@@ -9,8 +9,3 @@ Para rodar a aplicação é só chegar no dir e
 >flask run
 
 
-
-------
-comando para ativar o venv
-
->source venv/bin/activate
