@@ -1,4 +1,6 @@
+
 app.db
 venv
 __pycache__
 .vscode
+*.db
